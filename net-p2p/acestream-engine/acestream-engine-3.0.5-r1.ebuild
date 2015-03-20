@@ -22,7 +22,9 @@ DEPEND="dev-python/m2crypto[${PYTHON_USEDEP}]
 		dev-python/apsw[${PYTHON_USEDEP}]
 		gtk? ( dev-libs/acestream-python-appindicator )
 		dev-python/python-xlib
-		dev-python/setuptools"
+		dev-python/setuptools
+		dev-python/pygtk"
+
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/acestream_3.0.3_ubuntu_12.04_i686
