@@ -56,11 +56,11 @@ DEPEND="media-libs/aalib
 		mad? ( media-libs/libmad )
 		mpeg? ( media-libs/libmpeg2 media-sound/twolame )
 		dev-libs/fribidi
-		>=dev-libs/libgcrypt-1.5.4-r100
+		=dev-libs/libgcrypt-1.5.4-r100
 		dev-libs/libgpg-error
 		media-libs/mesa
-		dev-qt/qtwebkit
-		dev-qt/qtdeclarative
+		dev-qt/qtwebkit:4
+		dev-qt/qtdeclarative:4
 		lirc? ( app-misc/lirc )
 		ieee1394? ( sys-libs/libraw1394 sys-libs/libavc1394 media-libs/libdc1394 )
 		media-libs/libsdl
