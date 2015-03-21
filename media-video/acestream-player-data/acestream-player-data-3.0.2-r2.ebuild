@@ -26,61 +26,61 @@ for lang in ${LANGS}; do
 done
 
 CDEPEND=""
-DEPEND="media-libs/aalib
-		media-libs/libass
-		net-libs/gnutls
-		>=dev-lang/lua-5.1
-		media-libs/libshout[speex=,theora=]
-		media-libs/libpng:1.2
-		musepack? 				( media-sound/musepack-tools )
-		modplug? 				( media-libs/libmodplug )
-		matroska? 				( media-libs/libmatroska dev-libs/acestream-libebml media-libs/libmkv )
-		media-libs/alsa-lib
-		jack? ( media-sound/jack-audio-connection-kit )
-		media-libs/libcaca
-		>=media-libs/a52dec-0.7.4
-		pulseaudio? ( media-sound/pulseaudio )
-		portaudio? ( media-libs/portaudio )
-		avahi? ( net-dns/avahi )
-		media-video/ffmpeg[jack=,aac=,modplug=,ieee1394=,speex=,theora=,v4l=,vaapi=,vorbis=,alsa]
-		media-libs/acestream-x264
-		cddb? ( media-libs/libcddb )
-		cdda? ( media-libs/libcddb dev-libs/libcdio )
-		sys-apps/dbus
-		dvd? ( media-libs/libdca media-libs/libdvdnav media-libs/libdvdread )
-		dirac? ( media-video/dirac media-libs/schroedinger )
-		media-libs/libdvbpsi
-		aac? ( media-libs/faad2 )
-		flac? ( media-libs/flac )
-		ogg? ( media-libs/libogg media-libs/libkate )
-		mad? ( media-libs/libmad )
-		mpeg? ( media-libs/libmpeg2 media-sound/twolame )
+DEPEND="avahi? ( net-dns/avahi )
 		dev-libs/fribidi
 		>=dev-libs/libgcrypt-1.5.4-r1
 		dev-libs/libgpg-error
-		media-libs/mesa
+		dev-libs/libxml2
 		dev-qt/qtcore:4
 		dev-qt/qtdeclarative:4
 		dev-qt/qtgui:4
 		dev-qt/qtwebkit:4
-		lirc? ( app-misc/lirc )
+		>=dev-lang/lua-5.1
 		ieee1394? ( sys-libs/libraw1394 sys-libs/libavc1394 media-libs/libdc1394 )
+		jack? ( media-sound/jack-audio-connection-kit )
+		lirc? ( app-misc/lirc )
+		>=media-libs/a52dec-0.7.4
+		media-libs/aalib
+		media-libs/acestream-x264
+		media-libs/alsa-lib
+		aac? 					( media-libs/faad2 )
+		flac? 					( media-libs/flac )
+		media-libs/libass
+		media-libs/libcaca
+		cdda? 					( media-libs/libcddb dev-libs/libcdio )
+		cddb? 					( media-libs/libcddb )
+		dvd? 					( media-libs/libdca media-libs/libdvdnav media-libs/libdvdread )
+		media-libs/libdvbpsi
+		mad? 					( media-libs/libmad )
+		matroska? 				( media-libs/libmatroska dev-libs/acestream-libebml media-libs/libmkv )
+		modplug? 				( media-libs/libmodplug )
+		mpeg? 					( media-libs/libmpeg2 media-sound/twolame )
+		mtp? 					( media-libs/libmtp )
+		ogg? 					( media-libs/libogg media-libs/libkate )
+		media-libs/libpng:1.2
 		media-libs/libsdl
-		samba? ( net-fs/samba )
-		mtp? ( media-libs/libmtp )
+		media-libs/libshout[speex=,theora=]
+		theora? 				( media-libs/libtheora )
+		vorbis? 				( media-libs/libvorbis )
+		media-libs/mesa
+		media-libs/schroedinger
+		speex? 					( media-libs/speex )
+		media-libs/taglib
+		v4l? 					( media-libs/libv4l )
+		musepack? 				( media-sound/musepack-tools )
+		dirac? 					( media-video/dirac media-libs/schroedinger )
+		media-video/ffmpeg[jack=,aac=,modplug=,ieee1394=,speex=,theora=,v4l=,vaapi=,vorbis=,alsa]
+		net-libs/gnutls
 		ncurses? ( sys-libs/ncurses:5 )
+		pulseaudio? ( media-sound/pulseaudio )
+		portaudio? ( media-libs/portaudio )
+		samba? ( net-fs/samba )
 		libproxy? ( net-libs/libproxy )
-		speex? ( media-libs/speex )
-		theora? ( media-libs/libtheora )
+		sys-apps/dbus
 		upnp? ( net-libs/libupnp )
-		v4l? ( media-libs/libv4l )
 		vaapi? ( x11-libs/libva )
 		vcdx? ( dev-libs/libcdio media-video/vcdimager )
-		vorbis? ( media-libs/libvorbis )
-		dev-libs/libxml2
-		x11-libs/libXpm
-		media-libs/schroedinger
-		media-libs/taglib"
+		x11-libs/libXpm"
 
 RDEPEND="${DEPEND}"
 
