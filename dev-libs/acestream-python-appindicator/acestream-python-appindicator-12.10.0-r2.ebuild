@@ -24,8 +24,9 @@ RDEPEND=">=dev-libs/dbus-glib-0.98
 	>=dev-libs/glib-2.26
 	>=dev-libs/libdbusmenu-12.10.2-r2:3[gtk2]
 	dev-libs/acestream-libappindicator
-	>=x11-libs/gtk+-2.24.12:2"
-	dev-python/pygtk
+	>=x11-libs/gtk+-2.24.12:2
+	dev-python/pygtk"
+
 DEPEND="${RDEPEND}"
 
 QA_PRESTRIPPED="usr/lib/python2.7/site-packages/appindicator/_appindicator.so"
