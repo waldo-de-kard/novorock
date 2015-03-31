@@ -15,7 +15,8 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="pulseaudio jack portaudio avahi cddb cdda dvd dirac aac flac ogg lirc mad matroska modplug musepack mpeg
-		ieee1394 samba mtp ncurses libproxy speex theora upnp v4l vaapi vcdx vorbis"
+		ieee1394 samba mtp ncurses libproxy speex theora upnp v4l vaapi vcdx vorbis
+		aalib bidi alsa libass libcaca schroedinger a52 shout kate twolame"
 
 LANGS="ach af am ar ast be bg bn br ca cgg ckb co cs da de el en_GB es et eu fa ff fi fr fur ga gl he
 		hi hr hu hy id is it ja ka kk km ko lg lt lv mk ml mn ms my nb ne nl nn oc pa pl ps pt_BR pt_PT
@@ -26,8 +27,8 @@ for lang in ${LANGS}; do
 done
 
 CDEPEND=""
-DEPEND="avahi? ( net-dns/avahi )
-		dev-libs/fribidi
+DEPEND="avahi? ( >=net-dns/avahi-0.6:0[dbus] )
+		bidi? ( >=dev-libs/fribidi-0.10.4:0 )
 		>=dev-libs/libgcrypt-1.5.4-r1
 		dev-libs/libgpg-error
 		dev-libs/libxml2
@@ -39,31 +40,33 @@ DEPEND="avahi? ( net-dns/avahi )
 		ieee1394? ( sys-libs/libraw1394 sys-libs/libavc1394 media-libs/libdc1394 )
 		jack? ( media-sound/jack-audio-connection-kit )
 		lirc? ( app-misc/lirc )
-		>=media-libs/a52dec-0.7.4
-		media-libs/aalib
+		a52? ( >=media-libs/a52dec-0.7.4-r3:0 )
+		aalib? ( media-libs/aalib:0 )
 		media-libs/acestream-x264
-		media-libs/alsa-lib
+		alsa? ( >=media-libs/alsa-lib-1.0.24:0 )
 		aac? 					( media-libs/faad2 )
-		flac? 					( media-libs/flac )
-		media-libs/libass
-		media-libs/libcaca
+		flac? ( media-libs/libogg:0 >=media-libs/flac-1.1.2:0 )
+		libass? ( >=media-libs/libass-0.9.8:0 media-libs/fontconfig:1.0 )
+		libcaca? ( >=media-libs/libcaca-0.99_beta14:0 )
 		cdda? 					( media-libs/libcddb dev-libs/libcdio )
 		cddb? 					( media-libs/libcddb )
 		dvd? 					( media-libs/libdca media-libs/libdvdnav media-libs/libdvdread )
+		kate? ( >=media-libs/libkate-0.3.0:0 )
 		media-libs/libdvbpsi
 		mad? 					( media-libs/libmad )
 		matroska? 				( media-libs/libmatroska dev-libs/acestream-libebml media-libs/libmkv )
 		modplug? 				( media-libs/libmodplug )
-		mpeg? 					( media-libs/libmpeg2 media-sound/twolame )
+		mpeg? ( >=media-libs/libmpeg2-0.3.2:0 )
 		mtp? 					( media-libs/libmtp )
-		ogg? 					( media-libs/libogg media-libs/libkate )
+		ogg? 					( media-libs/libogg )
 		media-libs/libpng:1.2
 		media-libs/libsdl
-		media-libs/libshout[speex=,theora=]
+		shout? ( media-libs/libshout:0 )
 		theora? 				( media-libs/libtheora )
+		twolame? ( media-sound/twolame:0 )
 		vorbis? 				( media-libs/libvorbis )
 		media-libs/mesa
-		media-libs/schroedinger
+		schroedinger? ( >=media-libs/schroedinger-1.0.10:0 )
 		speex? 					( media-libs/speex )
 		media-libs/taglib
 		v4l? 					( media-libs/libv4l )
